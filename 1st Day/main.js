@@ -6,7 +6,8 @@ let ciudad = 'toluca'
 let edad = 100
 let estatura = 1.68
 let estaCasaso = false
-
+ // los comentarios pueden hacer que el codigo sea mas legible
+ 
 console.log (nombre, apellidos, pais, ciudad, edad, estatura, estaCasaso)
 
 let edad2 = 200
