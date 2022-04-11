@@ -271,3 +271,101 @@ console.log('Metodo search')
 console.log(string4.search('30'))
 console.log(string4.search('dias'))
 console.log(string4.search('JavaScript'))
+
+//metodo REPEAT
+console.log('Metodo Repeat')
+console.log(string4.repeat(2))
+
+//metodo CONVERTI NUMEROS DE CADENA 
+console.log('Metodo de convertir un numero de cadena')
+let ab = '10'
+console.log(ab, typeof ab)
+let abInt = parseInt(ab)
+console.log(abInt, typeof abInt)
+
+//metodo CONVERTIR CADENAS A FLOTANTES
+console.log('Metodo de convertir una cadena a flotante')
+let ac = '9.81'
+console.log(ac, typeof ac)
+// se puede usar este tipo de metodo o solo colocando un signo +
+//let acFloat = parseFloat(ac)
+let acFloat = +ac
+console.log(acFloat, typeof acFloat)
+
+//metodo CONVERTIR UN FLOTANTE A UN ENTERO
+console.log('Metodo convertir un flotante a un entero')
+let ad = '99.9999'
+console.log(ad, typeof ad)
+let adInt = parseInt(ad)
+console.log(adInt, typeof adInt)
+
+
+// ejercicios de practicas **********************************
+console.log('Ejercicios del dia 2 del curso de javascript')
+console.log('/////////////////////////////////////////')
+let desafio = '30 dias de JavaScript'
+console.log(desafio)
+console.log(desafio.length)
+console.log(desafio.toLocaleUpperCase())
+console.log(desafio.toLowerCase())
+console.log(desafio.substring(2))
+console.log(desafio.substring(3))
+console.log(desafio.includes('Script'))
+console.log(desafio.split())
+console.log(desafio.split(' '))
+let desafio2 = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
+console.log(desafio2.split(' '))
+console.log(desafio.replace('JavaScript', 'Python'))
+console.log(desafio.charAt(15))
+console.log(desafio.charCodeAt('J'))
+console.log(desafio.indexOf('a'))
+console.log(desafio.lastIndexOf('a'))
+let desafio3 = 'No puedes terminar una oracion con porque porque porque es una conjuncion' 
+console.log(desafio3.indexOf('porque'))
+console.log(desafio3.lastIndexOf('porque'))
+console.log(desafio3.search('porque'))
+console.log(desafio.trim(' '))
+console.log(desafio.startsWith('30'))
+console.log(desafio.endsWith('t'))
+console.log(desafio.match('a'))
+let desafio4 = '30 dias'
+let desafio5 = ' de JavaScript'
+console.log(desafio4.concat(desafio5))
+console.log(desafio.repeat(2))
+
+//ejercicios del dia 2 del curso de Javascript
+console.log('/////////////////////////////////////////')
+let exc = 'There si no excercise better for the heart than reaching down and linfting people us'
+let mt = "Love is not patronizing and charity isn't about pity, it is about love. \
+Charity and love are the same with charity you give love, so don't just give money \
+but reach out your hand instead"
+console.log(exc)
+console.log(mt)
+let numex = '10'
+let numex2 = '9.8'
+let numxInt = parseFloat(numex)
+let numxFloat = parseFloat(numex2)
+console.log(typeof numxInt)
+console.log(typeof numxFloat)
+let py2 = 'Python'
+console.log(py2.includes('on'))
+let esp = 'Espero que este curso no este lleno de jerga'
+console.log(esp.includes('jargon'))
+let nume100 = Math.floor(Math.random()*110)
+console.log(nume100)
+let num50100 = Math.random()*(255)
+console.log(num50100)
+console.log('1\t1\t1\t1\t1')
+console.log('2\t1\t2\t4\t8')
+console.log('3\t1\t3\t9\t27')
+console.log('4\t1\t4\t16\t64')
+console.log('5\t1\t5\t25\t25')
+console.log(desafio3.substring(35, 55))
+
+//ejercicios nivel 3 del curso de javascript
+console.log('////////////////////////////////////////////')
+let love = 'El amor es lo mejor que hay en este mundo. Algunos encontraron su amor y algunos todavia estan buscando su amor'
+let c = love.split(' ')
+console.log (c)
+let cd = c.length
+console.log(cd)
