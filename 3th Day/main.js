@@ -333,6 +333,7 @@ const circunferencia = (2*PI)*(radio)
 alert(`El AREA  del circulo es de ${resultado3} y su circumferencia es de ${circunferencia}`)
 */
 
+/*
 // calcular el pago que recibe un trabajador
 console.log('Calcular el salario de un trabajador')
 alert('Este programa calcula el pago de un trabajador ingresando las horas de trabajo')
@@ -341,3 +342,40 @@ const salario = parseInt(prompt('Cual es el SALARIO por hora?'))
 
 const sueldo = horas*salario
 alert(`Por ${horas} horas de trabajo tu recibes un pago de ${sueldo}`)
+
+//mide los caracteres de tu nombre y define si es corto o largo
+alert('Este programa define si tu nomnbre es corto o largo')
+const nombre2 = prompt('Escribe tu nombre:')
+
+let lengthNombre = nombre2.length
+    
+if (lengthNombre >= 7)
+    alert('tu nombre es largo')
+else 
+    alert('tu nombre es corto')
+
+    */
+// compara la diferencia entre edades 
+alert('este programa compara la diferencia entre dos edades')
+let edad1 = parseInt(prompt('Introduce la EDAD PERSONA 1'))
+let edad2 = parseInt(prompt('Introduce la EDAD PERSONA 2'))
+
+let dif = edad1-edad2
+let dif2 = edad2-edad1
+if (dif > 0)
+    alert(`la PERSONA 1 es mayor y la firerencia es por ${dif} años`)
+if (dif < 0)
+    alert(`la PERSONA 2 es mayor y la diferencia es por ${dif2} años`)
+if (dif == 0)
+    alert('tienen la misma edad')
+
+// verifica si tienes edad para conducir un coche
+alert('Este programa verifica si tienes edad suficiente para poder conducir')
+
+const fnac = parseInt(prompt('Ingresa el año en el que naciste'))
+
+var aniosCumplidos = 2022-fnac
+
+aniosCumplidos > 18
+    ? alert(`Tu edad es de ${aniosCumplidos} ya puedes conducir`)
+    : alert(`Tu edad es de ${aniosCumplidos}, aun no tienes edad para conducir`)
