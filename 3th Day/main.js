@@ -296,7 +296,7 @@ console.log('los segundos que han pasado desde 1 enero de 1970:', c6.getTime())
 
 console.log('////////////////////////////////////////////////////////////////////////////////////')
 //CALCULAR EL AREA DE UN TRIANGULO
-/*console.log ('calculadora de areas de triangulos')
+console.log ('calculadora de areas de triangulos')
 let base = parseInt(prompt('ingresa la BASE del triangulo a calcular:'))
 let altura = parseInt(prompt('ingresa el ALTURA del triangulo a calcular:'))
 
@@ -313,8 +313,7 @@ let lado3 = parseInt(prompt('Ingresa el LADO 3 del triangulo'))
 let resultado2 = lado1 + lado2 + lado3
 alert(`El perimetro del triangulo es de ${resultado2}`)
 console.log('El perimetro del triangulo es de:', resultado2)
-*/ 
-/*
+
 // CALCULAR EL AREA Y PERIMETRO DE UN RECTANGULO
 alert('este programa calcula el area y perimetro de un rectangulo')
 let base1 = parseInt(prompt('ingresa la BASE del rectangulo:'))
@@ -331,9 +330,9 @@ const radio = parseFloat(prompt('Cual es el RADIO del circulo a calcular?'))
 const resultado3 = PI*(radio*radio)
 const circunferencia = (2*PI)*(radio)
 alert(`El AREA  del circulo es de ${resultado3} y su circumferencia es de ${circunferencia}`)
-*/
 
-/*
+
+
 // calcular el pago que recibe un trabajador
 console.log('Calcular el salario de un trabajador')
 alert('Este programa calcula el pago de un trabajador ingresando las horas de trabajo')
@@ -354,8 +353,9 @@ if (lengthNombre >= 7)
 else 
     alert('tu nombre es corto')
 
-    */
+    
 // compara la diferencia entre edades 
+
 alert('este programa compara la diferencia entre dos edades')
 let edad1 = parseInt(prompt('Introduce la EDAD PERSONA 1'))
 let edad2 = parseInt(prompt('Introduce la EDAD PERSONA 2'))
@@ -379,3 +379,29 @@ var aniosCumplidos = 2022-fnac
 aniosCumplidos > 18
     ? alert(`Tu edad es de ${aniosCumplidos} ya puedes conducir`)
     : alert(`Tu edad es de ${aniosCumplidos}, aun no tienes edad para conducir`)
+
+//este programa calcula los segundos que has vivido solo introduciendo tu edad 
+
+console.log('/////////////////////')
+alert('Este programa calcula los segundos que has vivido')
+
+const edadSeg = parseInt(prompt('ingresa tu edad para saber cuantos segundos has vivido'))
+console.log(edadSeg)
+const vidSeg = new Date()
+const difS = 31536000*edadSeg
+alert(`Tu tienes ${edadSeg} anios de edad y eso equivale a ${difS}`)
+
+// este codigo convierte la hora en un formato legible para las personas 
+
+const u = new Date()
+const anio2 = u.getFullYear()
+const mes2 = u.getMonth()
+const dia2 = u.getDay()
+const hora2 = u.getHours()
+const min2 = u.getMinutes()
+
+console.log(`La fecha es ${anio2}-${mes2}-${dia} ${hora2}:${min2}`)
+console.log(`La fecha es ${dia2}-${mes2}-${anio2} ${hora2}:${min2}`)
+console.log(`La fecha es ${dia2}/${mes2}/${anio2} ${hora2}:${min2}`)
+
+
