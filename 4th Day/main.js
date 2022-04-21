@@ -77,10 +77,72 @@ let haceCalor = false
 haceCalor
     ? alert('Lleva una gorra!')
     : alert('No lleves gorra')
-*/
+
 
 ////////////////////////////////EJERCICIOS DEL DIA 4 DEL CURSO DE JAVASCRIPT
 console.log('///////////////////EJERCICIOS DEL DIA 4 DEL CUROS DE JAVASCRIPT')
 let edad = parseInt(prompt('Introduce tu edad en años cumplidos'))
-if (edad >= 18){alert('Ya tienes edad suficiente para conducir')}
-else {alert('Aun no tines edad suficiente para conducir')}
+
+if (edad >= 18){
+    alert('Ya tienes edad suficiente para conducir')
+}
+else {let dif = 18-edad 
+    alert(`Aun no tines edad suficiente para conducir, te faltan ${dif}`)
+}
+///////////////////////
+
+alert('Este programa compara las dos edades y muestra la diferencia de años')
+let miEdad = 27
+let edad2 = prompt('Introduce tu edad en años')
+let dif2 = miEdad-edad2
+let dif3 = edad2-miEdad
+if (miEdad >edad2){
+    alert(`Yo soy mayor que tu por ${dif2} años`)
+}
+else if(edad2>miEdad){
+    alert(`Tu eres mayor que yo por ${dif3} años`)
+}
+
+///////////////////////
+alert('Este programa verifica cual es ma grande de los dos numeros')
+let a = prompt('Introduce un valor numerico para A')
+let b = prompt('Introduce un valor numerico para B')
+let dif5 = (a>b)
+
+if (a>b){
+    alert(`${a} es mayor que ${b}`)
+}
+else{
+    alert(`${a} es menor que ${b}`)
+}
+
+////// el mismo programa pero usando OPREADORES TERNARIOS //////
+dif5 
+    ? alert(`${a} es mayor que ${b}`)
+    : alert(`${a} es menor que ${b}`)
+
+////////////////////
+alert('Este programa verifica si el numero introducido es par o inpar')
+let numero1 = prompt('Ingresa un numero para verificar si es PAR o IMPAR')
+if (numero1 % 2 == 0){
+    alert("El número es par")}
+else
+    {alert("El número es impar")}
+
+///////////////////
+*/
+alert('Este programa califica a los alumnos dependiendo desus calificaciones')
+let calif = prompt('Ingresa tu promedio del 0 al 100 y obtendras tu calificacion!')
+
+switch (calif){
+    case calif <50: alert(`Tu calificacion es 'F' porque tu promedio es de ${calif} de 100`)
+    break
+    case calif >=50 && calif <59: alert(`Tu calificacion es 'D' porque tu promedio es de ${calif} de 100`)
+    break
+    case calif >=60 && calif <69: alert(`Tu calificacion es 'C' porque tu promedio es de ${calif} de 100`)
+    break
+    case calif >=70 && calif <79: alert(`Tu calificacion es 'B' porque tu promedio es de ${calif} de 100`)
+    break
+    case calif >=80 && calif <100: alert(`Tu calificacion es 'A' porque tu promedio es de ${calif} de 100`)
+    break
+}
