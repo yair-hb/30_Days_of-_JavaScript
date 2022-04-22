@@ -1,6 +1,6 @@
 console.log ('ESTE ES EL INICIO DEL CODIGO DEL DIA 4 DEL CURSO DE JAVASCRIPT')
 // if y else 
-/*
+
 let num = prompt('Ingresa un numero para verificarlo')
 if (num >0 ){alert('este numero es positivo')}
 else {
@@ -130,19 +130,96 @@ else
     {alert("El número es impar")}
 
 ///////////////////
-*/
-alert('Este programa califica a los alumnos dependiendo desus calificaciones')
-let calif = prompt('Ingresa tu promedio del 0 al 100 y obtendras tu calificacion!')
 
-switch (calif){
+alert('Este programa califica a los alumnos dependiendo de sus calificaciones')
+let calif = parseInt(prompt('Ingresa tu promedio del 0 al 100 y obtendras tu calificacion!'))
+console.log(calif, typeof calif )
+
+switch (true){
     case calif <50: alert(`Tu calificacion es 'F' porque tu promedio es de ${calif} de 100`)
     break
-    case calif >=50 && calif <59: alert(`Tu calificacion es 'D' porque tu promedio es de ${calif} de 100`)
+    case calif >=50 && calif <=59: alert(`Tu calificacion es 'D' porque tu promedio es de ${calif} de 100`)
     break
-    case calif >=60 && calif <69: alert(`Tu calificacion es 'C' porque tu promedio es de ${calif} de 100`)
+    case calif >=60 && calif <=69: alert(`Tu calificacion es 'C' porque tu promedio es de ${calif} de 100`)
     break
-    case calif >=70 && calif <79: alert(`Tu calificacion es 'B' porque tu promedio es de ${calif} de 100`)
+    case calif >=70 && calif <=79: alert(`Tu calificacion es 'B' porque tu promedio es de ${calif} de 100`)
     break
-    case calif >=80 && calif <100: alert(`Tu calificacion es 'A' porque tu promedio es de ${calif} de 100`)
+    case calif >=80 && calif <=100: alert(`Tu calificacion es 'A' porque tu promedio es de ${calif} de 100`)
     break
+    default:
+            alert('ingresa solo numeros')
+}
+
+/////////////////////////
+
+console.log('Este programa te dice en que estacion del año esta cada mes')
+let mes2 = prompt('Ingresa un mes del año: Enero, Febrero, Marzo, Abril, Mayo, Junio...Diciembre')
+let mes2Min = mes2.toLowerCase()
+let mes2May = mes2Min.toUpperCase()
+console.log(mes2, mes2Min)
+
+switch(mes2Min){
+    case 'diciembre':
+    case 'enero':
+    case 'febrero': alert(`El mes de ${mes2May} pertenece a la estacion INVIERNO`)
+    break
+    case 'marzo':
+    case 'abril':
+    case 'mayo': alert(`El mes de ${mes2May} pertenece a la estacion de PRIMAVERA`)
+    break
+    case 'junio':
+    case 'julio':
+    case 'agosto': alert(`El mes de ${mes2May} pertenece a la estacion de VERANO`)
+    break
+    case 'septiembre':
+    case 'octubre':
+    case 'noviembre': alert(`El mes de ${mes2May} pertenece a la estacion de OTOÑO`)
+    break
+    default:
+        alert('ingresa un mes correcto, revisa la ortografia')
+}
+
+//////////////////////////
+console.log('Este programa sabe que dias son de trabajo y cuando es finde semana')
+let dia2 = prompt('Introduce el dia de la semana: lunes, martes, miercoles...')
+let diaMin = dia2.toLowerCase()
+let diaMay = dia2.toUpperCase()
+switch(diaMin){
+    case 'lunes':
+    case 'martes':
+    case 'miercoles':
+    case 'jueves':
+    case 'viernes': alert(`El dia ${diaMay} es dia de trabajo`)
+    break
+    case 'sabado':
+    case 'domingo': alert(`El dia ${diaMay} es Fin de semana, Descansa!!!`)
+    break
+    default:
+        alert('introduce un dia o revisa tu ortografia')
+}
+
+////////////////////////////
+console.log('Este programa te dice cuanto dias tiene el mes que le indiques')
+let mes = prompt('Introduce el mes que quieres saber cuantos dias tiene')
+let mesMin = mes.toLowerCase()
+let mesMay = mes.toUpperCase()
+
+switch(mesMin){
+    case 'enero':
+    case 'marzo':
+    case 'mayo':
+    case 'julio':
+    case 'agosto':
+    case 'octubre':
+    case 'diciembre': alert(`El mes de ${mesMay} tiene 31 DIAS`)
+    break
+    case 'abril':
+    case 'junio':
+    case 'septiembre':
+    case 'noviembre': alert(`El mes de ${mesMay} tiene 30 DIAS`)
+    break
+    case 'febrero': alert(`El mes de ${mesMay} tiene 28 DIAS`)
+    break
+    default:
+        alert('Introduce un mes o revisa tu ortografia')
 }
