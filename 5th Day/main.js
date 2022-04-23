@@ -148,3 +148,116 @@ let lastCountr = countries.length-1
 countries[lastCountr] = 'Mexico'
 
 console.log('Array modificado:', countries)
+
+// METODOS PARA MANIPULAR UN ARRAY
+console.log('////////////////')
+
+// array
+const arr4 = Array()
+console.log(arr4)
+const lugaresvacios8 = Array(8)
+console.log(lugaresvacios8)
+
+// fill
+const arr5 = Array()
+console.log(arr5)
+
+const lugaresde8conX = Array(8).fill('x')
+console.log(lugaresde8conX)
+
+const lugaresde8con0 = Array(8).fill('0')
+console.log(lugaresde8con0)
+
+const lugares4con4 = Array(4).fill('4')
+console.log(lugares4con4)
+
+
+// concat
+const primerArray = ['verde', 'azul', 'gris', 'rojo']
+const segundArray = ['naranja', 'amarillo', 'negro']
+
+console.log(primerArray)
+console.log(segundArray)
+
+const tercerArray = primerArray.concat(segundArray)
+console.log(tercerArray)
+
+const frutas2 = ['manzana', 'uva', 'pera', 'melon', 'sandia']
+const verdura2 = ['zanahoria', 'pepino', 'lechuga', 'limon']
+console.log(frutas2)
+console.log(verdura2)
+
+const frutasVerduras = frutas2.concat(verdura2)
+console.log(frutasVerduras)
+
+//lenght
+
+const numerito = [1,2,3,4,5]
+console.log(numerito, numerito.length)
+
+//index se obtiene el indice de los elementos
+
+console.log(numerito.indexOf(1))
+console.log(numerito.indexOf(2))
+console.log(numerito.indexOf(3))
+console.log(numerito.indexOf(4))
+console.log(numerito.indexOf(5))
+
+// check items  revisar si un elemento existe en un array
+
+const frutillas = ['melon', 'mango', 'banana', 'sandia']
+let index = frutillas.indexOf('banana')
+
+if (index===-1){
+    console.log('Este elemento NO existe en el array')
+}
+else {
+    console.log('Este elemento SI existe en el array')
+}
+///// TAMBIEN SE PUEDEN USAR OPERADORES TERNARIOS
+
+index ===-1 
+    ? console.log('Este elemento No existe en el array')
+    : console.log('Este elemento Si existe en el array')
+
+/////
+ let indexAguacate = frutillas.indexOf('aguacate')
+ if (indexAguacate ===-1){
+     console.log('Este elemento No existe en el array')
+ }
+ else {
+     console.log('Este elemento Si existe en el array')
+ }
+
+ //// lastIndexOf devuelve la ultima posicion de ese elemento si existe si no envia un (-1)
+
+ const numbers = [1,2,3,4,5,3,1,2]
+
+ console.log(numbers.lastIndexOf(1))
+ console.log(numbers.lastIndexOf(2))
+ console.log(numbers.lastIndexOf(3))
+ console.log(numbers.lastIndexOf(4))
+ console.log(numbers.lastIndexOf(5))
+ console.log(numbers.lastIndexOf(6)) // enviara un -1 porque no existe en el array
+
+/// includes (revisa si existe un elemento enviando un TRUE O FALSE)
+
+console.log(numbers.includes(1))
+console.log(numbers.includes(2))
+console.log(numbers.includes(3))
+console.log(numbers.includes(4))
+console.log(numbers.includes(5))
+console.log(numbers.includes(6))
+console.log(numbers.includes(7))
+
+const webTechs2 = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Redux',
+    'Node',
+    'MongoDB'
+  ]
+console.log(webTechs2.includes('Node'))
+console.log(webTechs2.includes('C'))
