@@ -1,3 +1,4 @@
+/*
 console.log('DIA 5 DEL CURSO DE JAVASCRIPT')
 console.log('ARRAYS')
 const arr = Array()
@@ -261,3 +262,103 @@ const webTechs2 = [
   ]
 console.log(webTechs2.includes('Node'))
 console.log(webTechs2.includes('C'))
+
+//Array.isArray revisa si el tipo de dato es un array
+const numbers2 = [0,1,2,3,4,5,6]
+console.log('Es un array?', numbers2, Array.isArray(numbers2))
+
+const numbers3 = 2000
+console.log('Es un array?', numbers3, Array.isArray(numbers3))
+
+///toString (convierte un array en un string)
+console.log('//////toString')
+console.log(numbers2.toString())
+
+const nombres = ['yair', 'Agustin', 'maria', 'gabriel', 'antonio']
+console.log(nombres, typeof nombres)
+const nombresTS = nombres.toString()
+console.log(nombresTS, typeof nombresTS)
+
+/// JOIN junta los elementos de un array
+
+console.log(numbers2)
+console.log(numbers2.join())
+
+console.log(nombres)
+console.log(nombres.join())
+console.log(nombres.join(''))
+console.log(nombres.join(' '))
+console.log(nombres.join(', '))
+console.log(nombres.join('* '))
+console.log(nombres.join('# '))
+
+console.log(webTechs2)
+console.log(webTechs2.join())
+console.log(webTechs2.join(' # '))
+
+/// slice
+
+console.log(numbers2)
+console.log(numbers2.slice()) // se copian todos los elementos
+console.log(numbers2.slice(0)) // se copian todos los elementos
+console.log(numbers2.slice(0, numbers2.length)) // se copian todos los elementos
+console.log(numbers2.slice(1,4)) // se copian los elemtos [1,2,3] no incluye la posicion final
+
+//splice necesita de 3 parametros posicion inicial, numero de veces a remover y numero de veces a agregar
+
+console.log(numbers2)
+console.log(numbers2.splice()) //remueve todos los elementos dentro del array
+console.log(numbers2.splice(0,1)) // remueve el primer elemento
+
+const numerito2 =[1,2,3,4,5]
+console.log(numerito2)
+numerito2.splice(3, 3, 7, 8, 9)
+console.log(numerito2.splice(3, 3, 7, 8))
+
+//push agrega elementos al final del array
+console.log(webTechs2)
+webTechs2.push('C++','Ruby')
+console.log(webTechs2)
+
+webTechs2.push('C#')
+console.log(webTechs2)
+
+/// POP remueve el ultimo item del array
+webTechs2.pop()
+console.log(webTechs2)
+
+// shift remueve el primer elemento del array
+console.log(webTechs2)
+console.log(webTechs2.shift())
+console.log(webTechs2)
+
+//unshift agrega un elemento al array en la primera posicion
+console.log(webTechs2)
+console.log(webTechs2.unshift('Swift'))
+console.log(webTechs2)
+
+//reverse se invierte el orden de los elementos del array
+console.log(webTechs2)
+console.log(webTechs2.reverse())
+
+//sorting acomoda los elementos del array en forma asecndente
+console.log(webTechs2)
+console.log(webTechs2.push('BBDD'))
+console.log(webTechs2.sort())
+console.log(webTechs2)
+
+// array dentro de un array 
+const primerNum = ['a','b','c']
+const segundNum = [1,2,3,4]
+const arrayOfarray = [['a','b','c'],[1,2,3,4]]
+console.log(arrayOfarray)
+console.log(arrayOfarray[0])
+
+const frontEnd = ['html', `css`, 'js', 'react', 'redux']
+const backEnd = ['Node', 'Express', 'mongoDB']
+const fullStack = [frontEnd, backEnd]
+console.log(fullStack)
+console.log(fullStack.length)
+console.log(fullStack[0])
+console.log(fullStack[1])
+*/
