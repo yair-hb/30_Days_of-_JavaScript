@@ -362,3 +362,173 @@ console.log(fullStack.length)
 console.log(fullStack[0])
 console.log(fullStack[1])
 */
+
+///////////////////////////////////////////////////////////////////
+console.log('///////////////////////////////// ejercicios')
+const countries = [
+    'Albania',
+    'Bolivia',
+    'Canada',
+    'Dinamarca',
+    'Etiopia',
+    'Finlandia',
+    'Alemania', 
+    'Hungria',
+    'Irlanda',
+    'Japon',
+    'Kenia'
+]
+
+const webTechss = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Redux',
+    'Node',
+    'MongoDB'
+]
+
+const test = []
+const test2 = ['a','b','c','d','e','f','g','h']
+console.log(test.length)
+console.log(test2.length)
+console.log(test2[0])
+console.log(test2[3])
+console.log(test2[7])
+
+const mixedDatatypes = ['Hola', 1,2,true,false,'adios']
+
+const itCompanies = ['Facebook', 'Google','Microsoft','Apple','IBM','Oracle','Amazon']
+console.log(itCompanies)
+console.log(itCompanies.length)
+console.log(itCompanies[0])
+console.log(itCompanies[3])
+console.log(itCompanies[6])
+console.log(itCompanies[1])
+console.log(itCompanies[2])
+console.log(itCompanies[4])
+console.log(itCompanies[5])
+
+//////////////
+console.log(itCompanies[0].toUpperCase())
+console.log(itCompanies[1].toUpperCase())
+console.log(itCompanies[2].toUpperCase())
+console.log(itCompanies[3].toUpperCase())
+console.log(itCompanies[4].toUpperCase())
+console.log(itCompanies[5].toUpperCase())
+
+//////////////
+console.log(itCompanies.toString(), ' Son grandes compañias IT')
+
+///////////7
+
+if (itCompanies.includes('Google')){
+    console.log(`Si se encuentra!`)
+}
+else {
+    console.log ('No se encuentra')
+}
+
+//////////////
+console.log(itCompanies.sort())
+
+/////////////
+console.log(itCompanies.reverse())
+
+////////////
+console.log(itCompanies.slice(0,3))
+
+///////////
+console.log(itCompanies.slice(4,7))
+
+///////////
+console.log(itCompanies.slice(3,4))
+
+///////////
+console.log(itCompanies)
+console.log(itCompanies.shift())
+console.log(itCompanies)
+
+////////
+console.log(itCompanies)
+console.log(itCompanies.slice(5))
+console.log(itCompanies)
+
+///////////////// 22222222222
+const shoppingCar2 = ['leche','cafe','te','miel']
+console.log(shoppingCar2)
+console.log(shoppingCar2.unshift('meat'))
+console.log(shoppingCar2.push('sugar'))
+console.log(shoppingCar2.splice(4,5))
+console.log(shoppingCar2)
+shoppingCar2[3] = 'te verde'
+console.log(shoppingCar2)
+
+/////////////////////
+
+let index = countries.indexOf('Etiopia')
+
+if (index===-1){
+    console.log('Este elemento NO existe en el array')
+    countries.push('Etiopia')
+    console.log('Se agregó Etiopia al array')
+}
+else {
+    console.log('Este elemento SI existe en el array')
+}
+
+let index2 = webTechss.indexOf('Sass')
+if (index2 ===-1){
+    console.log('Este elemento no existe')
+    webTechss.push('Sass')
+    console.log(webTechss)
+}
+else {
+    console.log('Sass es un procesador de CSS')
+}
+
+//////////////
+const frontEnd2 = ['HTML', 'CSS', 'JS', 'Redux']
+console.log(frontEnd2)
+const backEnd2 = ['Node', 'Express','MongoDB']
+console.log(backEnd2)
+
+const fullStack2 = frontEnd2.concat(backEnd2)
+console.log(fullStack2)
+
+///////////////////////3333333333333333333333333333333
+console.log('////////////////////////////////')
+const ages = [19,22,19,24,20,25,26,24,25,24]
+const ages2 = [19,22,19,24,20,25,26,24,25,24]
+console.log(ages2.sort())
+console.log(ages2.shift())
+console.log(ages2.splice(-1))
+
+/////////////////
+
+console.log(ages)
+let prom = (ages[0]+ages[1]+ages[2]+ages[3]+ages[4]+ages[5]+ages[6]+ages[7]+ages[8]+ages[9])/10
+console.log((ages[0]+ages[1]+ages[2]+ages[3]+ages[4]+ages[5]+ages[6]+ages[7]+ages[8]+ages[9])/10)
+console.log(ages.sort())
+
+let min = Math.min.apply(Math, ages)
+console.log('Valor minimo',min)
+let max = Math.max.apply(Math, ages)
+console.log('Valor maximo',max)
+console.log('Rango:',max-min)
+
+////////////////////
+console.log(Math.abs(min-prom))
+console.log(Math.abs(max-prom))
+
+/////////////////////
+console.log(countries)
+console.log(countries.slice(0,10))
+
+////////////////////
+let mit1 = Math.floor(countries.length/2)
+let mit2 = Math.ceil(countries.length/2)
+console.log(mit1,mit2)
+
+console.log('la mitad del array es:', countries[mit1],countries[mit2])
