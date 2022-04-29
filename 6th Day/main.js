@@ -211,3 +211,106 @@ for (let i =7; i>uArray.length; i--){
     aArray.push(uArray[0])
     console.log(aArray.join(''))
 }
+console.log('////////////////////////////////')
+
+for (let i =0; i<=10; i++){
+    console.log(`${i} x ${i} =`,i*i)
+}
+
+console.log('/////////////////////////////')
+
+for (let i=0; i<=10; i++){
+    let h = i**2
+    let j = i**3
+    console.log(`${i} ${h} ${j}`)
+}
+
+console.log('//////////////////////////7')
+
+for (let i =0; i<=100; i++){
+    if (i %2 ==0){
+        console.log(i)
+    }
+}
+
+console.log('////////////////////////')
+
+for (let i=0; i<=100; i++){
+    if (i %2 ==1){
+        console.log(i)
+    }
+}
+console.log('////////////////////////7')
+for (let a=1; a<=100; a++){
+    if (a%2 !=0){
+        let k = ((2**a)-1)
+        //console.log(k)
+        let m = k-1
+        //console.log(m)
+        let n = m%a
+        if (m%a==0){
+            console.log(a)
+        }
+    }
+}
+const nuevoArray = []
+console.log('///////////////////')
+for (let b =1; b<=100; b++){
+        nuevoArray.push(b)
+}
+console.log(nuevoArray)
+let suum = 0
+for (let i=0; i<nuevoArray.length; i++){
+        suum += nuevoArray[i]
+}
+console.log('la suma de todos los numeros del 1 al 100 es:',suum)
+
+console.log('---------------')
+const evens = []
+const odds = []
+for (let x = 1; x<=100; x++){
+    if (x%2 ==0){
+        evens.push(x)
+    }
+    else {
+        odds.push(x)
+    }
+}
+
+console.log(evens)
+let s1 = 0
+console.log(odds)
+let s2 = 0
+const s1s2 =[]
+
+for (let s =0; s<evens.length; s++){
+    s1 += evens[s]
+}
+s1s2.push(s1)
+
+for (let r=0; r<odds.length; r++){
+    s2 += odds[r]
+}
+s1s2.push(s2)
+console.log('La suma de los pares es de:', s1)
+console.log('La suma de los nones es de:', s2)
+
+console.log('---------------------')
+console.log(s1s2)
+
+console.log('---------------------')
+
+let numerito = Math.random()*11
+numerito = Math.floor(numerito)
+console.log(numerito)
+
+const nu = []
+while (nu.length <= 5){
+    numerito = Math.random()*11
+    numerito = Math.floor(numerito)
+    nu.push(numerito)
+}
+console.log(nu)
+
+console.log('--------------------')
+
