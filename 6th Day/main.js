@@ -299,14 +299,9 @@ console.log('---------------------')
 console.log(s1s2)
 
 console.log('---------------------')
-
-let numerito = Math.random()*11
-numerito = Math.floor(numerito)
-console.log(numerito)
-
 const nu = []
 while (nu.length <= 5){
-    numerito = Math.random()*11
+    let numerito = Math.random()*11
     numerito = Math.floor(numerito)
     nu.push(numerito)
 }
@@ -314,3 +309,44 @@ console.log(nu)
 
 console.log('--------------------')
 
+const nu2 = []
+while (nu2.length <= 5){
+    let cont = Math.random()*11
+    cont = Math.floor(cont)
+    if (nu2.includes(cont)==false){
+        nu2.push(cont)
+    }
+}
+console.log(nu2)
+
+console.log('---------------------')
+let al = Math.random().toString(36).substring(2)
+console.log('random ID',al)
+
+console.log('---------------------')
+
+let sli = Math.random().toString(36).slice(2)
+console.log(sli)
+console.log(sli.length)
+
+console.log('---------------------')
+
+const hex = () =>{
+let n = (Math.random()* 0xfffff *1000000).toString(16)
+return '#' + n.slice(0,6)
+}
+console.log(hex())
+
+console.log('----------------------')
+
+const rgb = (min, max) => min + Math.floor(Math.random() * (max - min + 1))
+const r = rgb(0, 255)
+const g = rgb(0, 255)
+const bb = rgb(0, 255)
+const rgbb = `rgb(${r},${g},${bb})`
+
+console.log(rgbb)
+
+console.log('---------------------')
+
+console.log(pais)
