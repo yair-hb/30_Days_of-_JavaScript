@@ -133,7 +133,7 @@ for (let i=0; i<= 10; i++){
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 /// ///////////////////////////////// EJERCICIOS DEL DIA 6 
-
+console.log('//////////////////////////////////////////////////////////////////////////////////EJERCICIOS DEL DIA 6 ')
 const pais = [
     'Albania',
     'Bolivia',
@@ -153,8 +153,9 @@ const webTech = [
     'CSS',
     'JavaScript',
     'React',
-    'Redux',
     'Node',
+    'Redux',
+    'Express',
     'MongoDB'
 ]
 
@@ -350,3 +351,130 @@ console.log(rgbb)
 console.log('---------------------')
 
 console.log(pais)
+
+const paisNuevo = []
+
+for (let a=0; a<pais.length; a++){
+    paisNuevo.push(pais[a].length)
+}
+console.log(paisNuevo)
+
+console.log('-------------------')
+console.log(pais)
+
+for (let y=0; y<pais.length; y++){
+    const listPais = []
+    listPais.push(pais[y])
+    let paisMay = listPais[0].slice(0,3).toUpperCase()
+    listPais.push(paisMay)
+    let paislength = listPais[0].length
+    listPais.push(paislength)
+    console.log(listPais)
+}
+
+console.log('------------------')
+
+const landpais = []
+for (let i=0; i<pais.length; i++){
+    if (pais[i].includes('land')==false){
+        continue
+    }
+    landpais.push(pais[i])
+}
+console.log('los paises que incliyen con land son:',landpais)
+
+console.log('--------------------')
+
+const iaPais = []
+for (let i=0; i<pais.length; i++){
+    if (pais[i].includes('ia')==false){
+        continue
+    }
+    iaPais.push(pais[i])
+}
+console.log('los paises que terminan con ia son:', iaPais)
+
+console.log('---------------------')
+
+const charArr = []
+
+console.log(paisNuevo)
+let mas = Math.max.apply(null,paisNuevo)
+charArr.push(mas)
+console.log(mas)
+
+console.log('-----------')
+
+const paisNuevo2 = []
+
+for (let a=0; a<pais.length; a++){
+    if (pais[a].length<=5){
+        paisNuevo2.push(pais[a])
+    }
+}
+console.log(paisNuevo2)
+
+console.log('-----------')
+
+const webt = []
+
+for (let a=0; a<webTech.length; a++){
+    webt.push(webTech[a].length)
+}
+console.log(webt)
+let maswt = Math.max.apply(null,webt)
+charArr.push(maswt)
+console.log(maswt)
+
+console.log('------------------')
+console.log(webTech)
+const wt22 = []
+
+for (let y=0; y<webTech.length; y++){
+    const wt2 = []
+    wt2.push(webTech[y])
+    let wtlength = wt2[0].length
+    wt2.push(wtlength)
+    wt22.push(wt2)
+    console.log(wt2)
+}
+console.info(wt22)
+
+console.log('--------------------')
+const hi = []
+
+for (let y=0; y<webTech.length; y++){
+    const hj = []
+    hj.push(webTech[y])
+    let paisMay = hj[0].slice(0,1).toUpperCase()
+    hi.push(paisMay)
+    let paislength = hj[0].length
+    hj.push(paislength)
+    //console.log(hj)
+}
+console.log(hi.splice(4,7).reverse().toString())
+
+console.log('---------------------')
+
+for (let a=0; a<webTech.length; a++){
+    console.log(webTech[a])
+}
+
+console.log('-----------------------')
+
+const frutas = ['banana','orange','mango','lemon']
+const frutOrd = []
+console.log(frutas)
+for (let b= frutas.length-1; b>=0; b--){
+    //console.log(frutas[b])
+    frutOrd.push(frutas[b])
+}
+console.log(frutOrd)
+
+console.log('------------------------------')
+
+const fullStack3 = [['HTML','CSS','JS','React'],['Node','Express','MongoDB']]
+
+for (let f=0; f<fullStack3.length; f++){
+    console.log(fullStack3[f])
+}
