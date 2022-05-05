@@ -157,4 +157,126 @@ console.log(sumAll3(100,100,100,100,100,100))
 
 // ------------------------------FUNCIONES ANONIMAS 
 console.log('----------------------FUNCIONES ANONIMAS')
+// funciones ananonimas o SIN NOMBRE
 
+const anonymousFun = function(){
+    console.log('Soy una funcion anonima y mi valor esta almacenada en anonymousFun')
+}
+
+anonymousFun()
+
+//--------------------------------- FUNCIONES EXPRESS
+console.log('----------------------FUNCIONES EXPRESS')
+// son funciones anonimas 
+
+const square2 = function(n){
+    return n*n
+} 
+
+console.log(square2(5))
+
+// ----------------------------------FUNCIONES SELF INVOKING 
+console.log('--------------------------FUNCIONES SELF INVOKING')
+// son funciones anonimas que no necesitan ser llamadas para regresar un valor
+
+let squaredNum = (function(g){
+    return g*g
+})(10)
+
+console.log(squaredNum)
+
+///--------------------------------- FUNCIONES FLECHA 
+console.log('-------------------------FUNCIONES FLECHA')
+// ES UNA FORMA DISTINTA DE DECLARAR UNA FUNCION 
+
+function square3 (n){
+    return n*n
+}
+console.log(square3(3))
+////////////////////////////+
+
+const square33 = n => {
+    return n*n
+}
+console.log(square33(3))
+
+const changeMayus = arr2 => {
+    const nuevArr = []
+    for (const element of arr2){
+        nuevArr.push(element.toUpperCase())
+    }
+    return nuevArr
+}
+const country = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
+console.log(country)
+console.log(changeMayus(country))
+
+/////////////////////////////
+
+const imprimeFullName2 = (primerNombre, apellido2) =>{
+    return primerNombre+' '+ apellido2
+}
+
+console.log(imprimeFullName2('Agus','GHGHGH'))
+
+////////////////////////
+const imprimeFullName3 = (nombre1, apellido1) => `Este es el resultado ${nombre1} ${apellido1}`
+
+console.log(imprimeFullName3('javier', 'Beitez'))
+
+//------------------------------------FUNCION CONNPARAMETROS POR DEFAULT
+console.log('----------------------------FUNCIONES CON PARAMETROS DEFAULT')
+
+function saludos (nombre = 'Pedro'){
+    let saludo = `${nombre} eres bienvenido al dia 7 del curso de JS`
+    return saludo
+}
+console.log(saludos())
+console.log(saludos('Yair'))
+console.log(saludos('Maria'))
+
+////////////7
+
+function generaNombre (nombre='Yair', apellido='Hernan'){
+    let espacio = ' '
+    let full = nombre+espacio+apellido
+    return full
+}
+
+console.log(generaNombre())
+console.log(generaNombre('Gabriel','Bne'))
+
+/////////// 
+function pesoObjct (masa, gravedad=9.81){
+    let peso = masa*gravedad
+    return peso
+}
+
+console.log(pesoObjct(100))
+console.log(pesoObjct(200, 1.62))
+
+////////////// ejemplos de funciones con parametros default con funciones flecha
+
+const saludos2 = (nombre='Pedro') => {
+    let saludo = nombre + ' Bienvenido al dia 7 del curso de javascript'
+    return saludo
+}
+
+console.log(saludos2())
+console.log(saludos2('Yairrrr'))
+
+const generaFullNam = (nombre= 'agustin', apellido='Jacinto') => {
+    let espacio = ' '
+    let fullName = nombre+espacio+apellido
+    return fullName
+}
+console.log(generaFullNam())
+console.log(generaFullNam('Alan', 'Benitez'))
+
+const calculaAge = (añoNac, añoActual=2022) => añoActual-añoNac
+console.log(calculaAge(1992))
+console.log(calculaAge(1900, 2010))
+
+const pesoOb = (mass, gravedad=9.81) => mass*gravedad+'N'
+console.log('El peso del objeto en N es:',pesoOb(100))
+console.log('El peso del objeto en N es:',pesoOb(100, 1.62))
