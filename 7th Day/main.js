@@ -280,3 +280,166 @@ console.log(calculaAge(1900, 2010))
 const pesoOb = (mass, gravedad=9.81) => mass*gravedad+'N'
 console.log('El peso del objeto en N es:',pesoOb(100))
 console.log('El peso del objeto en N es:',pesoOb(100, 1.62))
+
+
+/////////////////////////////////////////////////////////// EJERCICIOS DEL DIA 7 DEL CURSO DE JS
+console.log('//////////////////////////////////////////////// ejercicios del dia 7 de js')
+
+function fullNameE (){
+    console.log('Yair Hernandez')
+}
+fullNameE()
+//////////////
+function nombreC (nombre, apellido){
+    let espacio = ' '
+    let nameComp = nombre+espacio+apellido
+    return nameComp
+}
+console.log(nombreC('Yair', 'Hernandez'))
+//////////////
+
+function addNumb (num, num2){
+    let sum = num+num2
+    return sum
+}
+console.log('la suma de los numeros es:',addNumb(2,3))
+/////////////
+
+function rectArea (base, altura){
+    let rectArea = base*altura
+    return rectArea
+}
+console.log('el aresa del rectangulo es de:',rectArea(5,10))
+//////////////
+
+const perimRect = (base,lado) => {
+    let perim = 2*(base*lado)
+    return perim
+}
+
+console.log('El perimetro del rectangulo es de:',perimRect(2,8))
+/////////////
+
+const volPrismRec = (largo,alto,ancho) => {
+    let volPrism = largo*alto*ancho
+    return volPrism
+}
+console.log('El volumen de un prisma rectangular es de:',volPrismRec(2,3,10))
+/////////////
+
+function areaCirc (radio, pi=Math.PI) {
+    let area = pi*(radio*radio)
+    return area
+}
+console.log('El area del circulo es de:',areaCirc(10))
+/////////////
+
+function perimCirc (radio, pi=Math.PI){
+    let perim = 2*(pi*radio)
+    return perim
+}
+
+console.log('El perimetro del circulo es de:',perimCirc(10))
+/////////////
+
+function densidad (mas, volumen){
+    let dens = mas/volumen
+    return dens
+}
+
+console.log('La densidad es de:', densidad(100,300))
+/////////////
+
+function speed (distancia, tiempo){
+    let veloc = distancia/tiempo
+    return veloc
+}
+console.log('La velocidad es de:',speed(10000,50),'m/min')
+////////////
+
+const peso = (masa, gravedad=9.81) =>{
+    let peso = masa*gravedad
+    return peso
+}
+console.log('El peso es de:',peso(30))
+//////////
+
+function celciusFarenh (gradC){
+    let conver = (gradC*(9/5))+32
+    return conver
+}
+
+console.log(`celcius a fahrenheit equivalen a:`,celciusFarenh(30))
+//////////////
+
+function indiceMC (peso, altura){
+    let imc = peso/(altura*altura)
+    console.log()
+    return imc 
+}
+//console.log('Tu indice de masa corporal es de:',indiceMC(prompt('Cual es tu peso en kg?'), prompt('Cual es tu altura en metros')))
+///////////////
+
+function checkSeason (mesActual){
+    let estacion 
+    if (mesActual=='diciembre'){//||'enero'|| 'feberero'){
+        estacion = 'Invierno'
+    }
+    else if (mesActual=='enero'){//||'enero'|| 'feberero'){
+        estacion = 'Invierno'
+    }
+    else if (mesActual=='febrero'){//||'enero'|| 'feberero'){
+        estacion = 'Invierno'
+    }
+    else if (mesActual=='marzo'){//||'abril'||'mayo'){
+        estacion = 'Primavera'
+    }
+    else if (mesActual=='abril'){//||'abril'||'mayo'){
+        estacion = 'Primavera'
+    }
+    else if (mesActual=='mayo'){//||'abril'||'mayo'){
+        estacion = 'Primavera'
+    }
+    else if (mesActual=='junio'){//||'julio'||'agosto'){
+        estacion = 'Verano'
+    }
+    else if (mesActual=='julio'){//||'julio'||'agosto'){
+        estacion = 'Verano'
+    }
+    else if (mesActual=='agosto'){//||'julio'||'agosto'){
+        estacion = 'Verano'
+    }
+    else if (mesActual=='septiembre'){//||'octubre'||'noviembre'){
+        estacion = 'Otoño'
+    }
+    else if (mesActual=='octubre'){//||'octubre'||'noviembre'){
+        estacion = 'Otoño'
+    }
+    else if (mesActual=='noviembre'){//||'octubre'||'noviembre'){
+        estacion = 'Otoño'
+    }
+    else{
+        console.log('introduce un mes valido o revisa tu ortografia')
+    }
+    console.log(`El mes de ${mesActual} corresponde a:`)
+    return estacion
+}
+//console.log(checkSeason(prompt('Ingresa un mes del año').toLowerCase()))
+//////////////////
+
+function findMinMax (nu1,nu2,nu3){
+    //const uno =[0, -101,2,-3,4]
+    let max =[0], min = [0]
+    for (let i=1; i<arguments.length; i++){
+    if (arguments[i]>max){
+        max= arguments[i]
+    }
+    if (arguments[i]<min){
+        min= arguments[i]
+    }
+}
+}
+
+console.log(findMinMax(1,2,3))
+
+
