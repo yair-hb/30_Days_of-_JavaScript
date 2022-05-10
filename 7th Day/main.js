@@ -428,18 +428,151 @@ function checkSeason (mesActual){
 //////////////////
 
 function findMinMax (nu1,nu2,nu3){
-    //const uno =[0, -101,2,-3,4]
-    let max =[0], min = [0]
-    for (let i=1; i<arguments.length; i++){
-    if (arguments[i]>max){
-        max= arguments[i]
+    let max = arguments[0], min =arguments[0]
+    for (let i = 0; i<arguments.length; i++){
+        if (arguments[i] > max) { max = arguments[i]; }
+        if (arguments[i] < min) { min = arguments[i]; }
     }
-    if (arguments[i]<min){
-        min= arguments[i]
-    }
-}
+    console.log('El minimo es:',min)
+    console.log('El maximo es:',max)
 }
 
-console.log(findMinMax(1,2,3))
+findMinMax(-10, 220, -50)
 
+////////////////////
+function printArray (){
+    for(let i=0; i<arguments.length[i]; i++){
+        console.log([i])
+    }
+    return arguments
+}
 
+console.log(printArray(1,2,3,4)) 
+
+/////////////////////
+function showDateTime (){
+    const ti = new Date()
+    const dia = ti.getDay()
+    const mes = ti.getMonth()
+    const año = ti.getFullYear()
+    const hora = ti.getHours()
+    const min = ti.getMinutes()
+    let tiempo = console.log(`${dia}/${mes}/${año} ${hora}:${min}`)
+    return tiempo
+}
+
+showDateTime()
+
+/////////////////////
+ function swapValues (x,y){
+     let a = x
+     x = y
+     y = a
+     let resu = console.log(x,y)
+     return resu
+ }
+ swapValues(10,1)
+
+ /////////////////////
+ function reverse (...arguments){
+    //onst arri = ['a','b','c','d','e','f']
+    const nuArr = []
+    console.log('Los elementos del array son:',arguments)
+    let l = arguments.length
+    for (let i=0; i<l; i++){
+        let t = arguments.pop()
+        nuArr.push(t)
+        }
+        
+    console.log(nuArr)
+    }
+
+reverse('a','b','c','d','e','f')
+ ///////////////////
+
+ function capitalize (palabra){
+     let may = palabra.toUpperCase()
+     return may
+ }
+
+ console.log(capitalize('adiossssssssssssssssscsefhwbeufbweufw'))
+
+ ////////////////////
+ function addItem (palabra, palabra2){
+     let add = palabra+palabra2
+     return add
+ }
+
+ console.log(addItem('hola', 'adios'))
+
+/////////////////////
+const t = ['a','b','c','d','e']
+function removeItem (index){
+    let rem = t.splice(index,1)
+    console.log(rem)
+    console.log(t)
+}
+removeItem(1)
+
+///////////////////////
+
+function sumOfNumbers (numero){
+    const nuevoArray = []
+    for (let b =1; b<=numero; b++){
+            nuevoArray.push(b)
+    }
+    let suum = 0
+    for (let i=0; i<nuevoArray.length; i++){
+            suum += nuevoArray[i]
+    }
+    console.log(`la suma de todos los numeros del 1 al ${numero} es:`,suum)
+}
+sumOfNumbers(10)
+
+/////////////////////////
+
+function sumOfOdds (numero){
+    const evens = []
+    const odds = []
+    for (let x = 1; x<=numero; x++){
+        if (x%2 ==0){
+            evens.push(x)
+        }
+        else {
+            odds.push(x)
+        }
+    }
+    let sum= 0
+    for (let i =0; i<evens.length; i++){
+        sum += evens[i]
+    }
+    let sum2 = 0
+    for (let i=0; i<odds.length; i++){
+        sum2 += odds[i]
+    }
+    console.log(`El rango que elegiste es: `, numero)
+    console.log(`La suma de los pares en el rango es: `,sum)
+    console.log(`La suma de los impares en el rangom es: `, sum2)
+}
+
+sumOfOdds(5)
+
+/////////////////////////////////7
+function evensAndOdds (rango){
+    const evens = []
+    const odds = []
+    for (let i=0; i<=rango; i++){
+        if (i%2 ==0){
+            evens.push(i)
+        }
+        else{
+            odds.push(i)
+        }
+    }
+    console.log(evens)
+    console.log(`La cantidad de numeros pares hasta ${rango} es:`,evens.length)
+    console.log(odds)
+    console.log(`La cantidad de numeros impares hasta ${rango} es:`,odds.length)
+}
+
+evensAndOdds(100)
