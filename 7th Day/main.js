@@ -484,7 +484,7 @@ showDateTime()
         nuArr.push(t)
         }
         
-    console.log(nuArr)
+    console.log('y el array invertido es:',nuArr)
     }
 
 reverse('a','b','c','d','e','f')
@@ -576,3 +576,242 @@ function evensAndOdds (rango){
 }
 
 evensAndOdds(100)
+
+////////////////////////////
+
+function anyRndom (...arguments){
+    //console.log(arguments)
+    let rnd = Math.random()*110
+    rnd = Math.floor(rnd) 
+    console.log('El numero aleatorio es:',rnd)
+}
+anyRndom()
+//////////////////////////
+const gh =[]
+
+function ipAddress (){
+    for (let i=0; i<4; i++){
+        let aa = Math.random()*255
+        aa = Math.floor(aa)
+        //console.log(aa)
+        gh.push(aa)
+    }
+    console.log(`La direccion IP es: ${gh[0]}.${gh[1]}.${gh[2]}.${gh[3]}`)
+}
+ipAddress()
+
+////////////////////////////
+function macAddress (){
+    const ty = []
+        for (let i=0; i<6; i++){
+        let n = (Math.random()*0xfffff)
+        n = Math.floor(n).toString(16)
+        let u = n.slice(0,2)
+        ty.push(u)
+    }
+    console.log(`La direccion Mac es: ${ty[0]}-${ty[1]}-${ty[2]}-${ty[3]}-${ty[4]}-${ty[5]}`)
+}
+macAddress()
+
+////////////////////////////
+function hexaCode (){
+    let n = (Math.random()* 0xfffff *1000000).toString(16)
+    n = n.slice(0,6)
+    console.log(`EL codigo hexadecimal es: #${n}`)
+}
+
+hexaCode()
+
+////////////////////////////7
+function idUser (){
+    let sli = Math.random().toString(36).slice(6)
+    console.log(`El id del usuario es: ${sli}`)
+}
+
+idUser()
+////////////////////////////
+
+function userGenerator (){
+    let tim = prompt('Cuantas usuarios quieres crear?')
+    let numChar = prompt('De cuantos caracteres quieres que se genere tu usuario?')
+    for (let i=1; i<=tim; i++){
+        const ti = []
+        for(let j=0; j<numChar; j++){
+            let numerito = Math.random().toString(36)
+            numerito = numerito.slice(2,3)
+            ti.push(numerito)
+        }
+        let rti = ti.join('')
+        console.log(`Tu usuario ${i} es: ${rti}`)
+    }
+    console.log(`El numero de carateres es ${numChar}`)
+}
+
+///////////////////////////
+
+function rgbGenerator (){
+    const ty = []
+    for (let i=0; i<3; i++){
+        let nr = Math.random()*256
+        nr = Math.floor(nr)
+        ty.push(nr)
+    }
+    console.log(`El codigo RGB(${ty[0]},${ty[1]},${ty[2]})`)
+}
+rgbGenerator()
+///////////////////////////
+const ahc = []
+function arrayOfHexaColors (){
+    let n = (Math.random()* 0xfffff *1000000).toString(16)
+    ahc.push(n)
+    let fg = '#' + n.slice(0,6)
+    console.log([fg])
+}
+arrayOfHexaColors()
+
+/////////////////////////////
+
+function arrayOfRgbColors (){
+    const arc = []
+    for (let i=0; i<3; i++){
+    let n = (Math.random()*255).toString()
+    n = Math.floor(n)
+    arc.push(n)
+    }
+    return console.log('el codigo RGB',arc)
+}
+arrayOfRgbColors()
+
+//////////////////////////////
+function rgbToHex () { 
+    var hex = "#ff64c8";
+    var red = parseInt(hex[1]+hex[2],16);
+    var green = parseInt(hex[3]+hex[4],16);
+    var blue = parseInt(hex[5]+hex[6],16);
+    console.log(`El codigo ${hex} es equivalente a:`,'rgb',red,green,blue);
+}    
+rgbToHex()
+
+//////////////////////////////
+function hexToRgb (r,g,b){
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
+}
+console.log(hexToRgb(0,51,254))
+
+////////////////////////////////
+
+function generateColors (tipo, cantidad){
+    if (tipo == 'hexa'){
+        for(let i=0; i<cantidad; i++){
+            hexaCode()
+        }
+    }
+    if (tipo == 'rgb'){
+        for(let i=0; i<cantidad; i++){
+            rgbGenerator()
+        }
+    }
+}
+//generateColors(prompt('que tipo?'),prompt('cantidad'))
+/////////////////////////////////
+
+function shuffleArray (){
+    const sflAr =[]
+    let fg = Math.random()*35
+    fg = Math.floor(fg)
+    console.log(fg)
+    for (let i=0; i<fg; i++){
+            let n = (Math.random()*0xfffff)
+            n = Math.floor(n).toString(16)
+            let u = n.slice(0,1)
+            sflAr.push(u)
+        }
+    console.log(sflAr)
+}
+shuffleArray()
+/////////////////////////////
+
+function sum (){
+    let rnd = Math.random()*35
+    rnd = Math.floor(rnd)
+    console.log(rnd)
+    let sumi = 0
+    const aux = []
+    for (let i=0; i<rnd; i++){
+        aux.push(i)
+    }
+    console.log(aux)
+    for (let a=0; a<aux.length; a++){
+        sumi += aux[a]
+    }
+    console.log('La suma de estos numeros es de:',sumi)
+}
+sum()
+///////////////////////////////////
+
+function average (){
+    let rnd = Math.random()*20
+    rnd = Math.floor(rnd)
+    console.log('numero aleatorio:',rnd)
+    const aux = []
+    let sumi = 0
+    let prom = 0
+    for (let i=0; i<rnd; i++){
+        aux.push(i)
+    }
+    console.log(aux)
+    for (let i=0; i<aux.length; i++){
+        sumi += aux[i]
+        
+    }
+    prom = sumi/rnd
+    console.log('La suma de estos numeros es de:',sumi)
+    console.log('El promedio es de:',prom)
+}
+average()
+///////////////////////////////////
+
+function modifyArray (...arguments){
+    const tu= arguments
+    if (arguments.length >=5){
+        let tud = tu[4].toUpperCase()
+        console.log('Array original:',arguments)
+        tu.splice(4,1,tud)
+        console.log('Array modificado',arguments)
+    }
+    if (arguments.length <5){
+        console.log('Array original:', arguments)
+        console.log('Not Found (no se encuentra el 5to elemento para modificar')
+    }
+}
+modifyArray('Google', 'Facebook','Apple', 'Amazon','Microsoft', 'IBM')
+
+///////////////////////////////////
+
+function isPrime(num) {
+    for(var i = 2; i < num; i++)
+      if(num % i === 0) return false;
+    return num > 1;
+  }
+console.log(isPrime(7))
+
+//////////////////////////////////
+
+const yu = []
+function svnRndmNumbrs (){
+    for (let i=0; i<= 100; i++){
+        let u = Math.random()*10
+        u = Math.floor(u)
+        if (yu.includes(u)== false){
+            yu.push(u)
+        }
+        if (yu.length == 7){
+            break
+        }
+    }
+    console.log(yu)
+}
+svnRndmNumbrs()
+
+//////////////////////////////
+
