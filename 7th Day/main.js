@@ -814,4 +814,32 @@ function svnRndmNumbrs (){
 svnRndmNumbrs()
 
 //////////////////////////////
+const pais = [
+    'Albania',
+    'Bolivia',
+    'Canada',
+    'Dinamarca',
+    'Etiopia',
+    'Finlandia',
+    'Alemania',
+    'Hungria',
+    'Irlanda',
+    'Japon',
+    'Kenia'
+]
+const copyPais =pais.slice()
+const rev =[]
+let er = pais.length
+function reverseCountries (){
+    for (let i=0; i<er; i++){
+        //copyPais.push(pais[i])
+        let li = copyPais.pop()
+        rev.push(li)
 
+    }
+    console.log(pais)
+    console.log(copyPais)
+    console.log(rev)
+}
+
+reverseCountries()
