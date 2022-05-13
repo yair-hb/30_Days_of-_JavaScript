@@ -176,5 +176,57 @@ console.log(persona.getPersonInfo())
 
 //////////////////////// METODOS PARA LOS OBJETOS 
 console.log('--------------------------Metodos para los objetos')
+console.log('((((((((((((((Object.assing)))))))))))))) para copiar un objeto sin modificar el objeto original')
 
+const persona2 ={
+    nombre: 'yair',
+    apellido: 'Lopez',
+    pais: 'Mexico', 
+    ciudad: 'Toluca',
+    habilidades: ['HTML','CSS','JS'],
+    titulo: 'Estudiante',
+    direccion:{
+        calle: 'La calle',
+        numero: 789,
+        codigoPostal: 50505
+    },
+    getPersonInfo: function(){
+        return `Yo soy ${this.nombre} ${this.apellido} y vivo en ${this.ciudad} en ${this.pais}, y mis habilidades son: ${this.habilidades} `
+    }
+}
+console.log(persona2.getPersonInfo())
 
+console.log(persona2)
+const copyPersona = Object.assign({}, persona2)
+console.log(copyPersona)
+
+/////////////////////////
+console.log('((((((((((((((Object.keys)))))))))))))) para obtener los valores o propiedades de un objeto')
+
+const keys = Object.keys(copyPersona)
+console.log(keys)
+const address = Object.keys(copyPersona.direccion)
+console.log(address)
+
+//////////////////////
+console.log('((((((((((((((Object.values)))))))))))))) para obtener los values de un objeto en un array')
+
+const values = Object.values(copyPersona)
+console.log(values)
+
+//////////////////////
+console.log('((((((((((((((Object.entrie))))))))))))))para obtener las propiedades y valores de un objeto')
+
+const entries = Object.entries(copyPersona)
+console.log(entries)
+
+/////////////////////
+console.log('((((((((((((((hasOwnProperty)))))))))))))) verifica si existe esa propiedad en el objeto')
+
+console.log(copyPersona.hasOwnProperty('name'))
+console.log(copyPersona.hasOwnProperty('Nombre'))
+console.log(copyPersona.hasOwnProperty('nombre'))
+console.log(copyPersona.hasOwnProperty('direccion'))
+
+////////////////////////////////////
+console.log('-------------------------------------------------EJERCICIOS DEL DIA 8 DEL CURSO DE JAVASCRIPT')
