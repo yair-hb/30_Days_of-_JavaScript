@@ -230,3 +230,102 @@ console.log(copyPersona.hasOwnProperty('direccion'))
 
 ////////////////////////////////////
 console.log('-------------------------------------------------EJERCICIOS DEL DIA 8 DEL CURSO DE JAVASCRIPT')
+
+const dog = {
+    nombre: 'Hunter',
+    legs: 'black',
+    color: 'Black',
+    age: 6,
+    bark: function (){
+        return 'woof woof'
+    }
+}
+console.log(dog)
+
+console.log(dog.nombre,dog.color, dog.age, dog.bark())
+dog.raza = 'labrador'
+dog.getDogInfo = function (){
+    return `El perro se llama ${this.nombre} es de raza ${this.raza} y es de color ${this.color}`
+}
+console.log(dog.getDogInfo())
+
+////////////////////////////////////
+
+const users = {
+    Alex: {
+      email: 'alex@alex.com',
+      skills: ['HTML', 'CSS', 'JavaScript'],
+      age: 20,
+      isLoggedIn: false,
+      points: 30
+    },
+    Asab: {
+      email: 'asab@asab.com',
+      skills: ['HTML', 'CSS', 'JavaScript', 'Redux', 'MongoDB', 'Express', 'React', 'Node'],
+      age: 25,
+      isLoggedIn: false,
+      points: 50
+    },
+    Brook: {
+      email: 'daniel@daniel.com',
+      skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
+      age: 30,
+      isLoggedIn: true,
+      points: 50
+    },
+    Daniel: {
+      email: 'daniel@alex.com',
+      skills: ['HTML', 'CSS', 'JavaScript', 'Python'],
+      age: 20,
+      isLoggedIn: false,
+      points: 40
+    },
+    John: {
+      email: 'john@john.com',
+      skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
+      age: 20,
+      isLoggedIn: true,
+      points: 50
+    },
+    Thomas: {
+      email: 'thomas@thomas.com',
+      skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+      age: 20,
+      isLoggedIn: false,
+      points: 40
+    },
+    Paul: {
+      email: 'paul@paul.com',
+      skills: ['HTML', 'CSS', 'JavaScript', 'MongoDB', 'Express', 'React', 'Node'],
+      age: 20,
+      isLoggedIn: false,
+      points: 40
+    }
+}
+
+const result = Object.fromEntries([
+    Object.entries(users).sort((a, b) => b[1].skills.length - a[1].skills.length)[0]
+  ]);
+  
+  console.log('El que tiene mas skills es:',result);
+
+  //////////////////////////////////
+
+const log = Object.keys(users)
+console.log(log)
+let contador = 0
+const use = []
+for (let i=0; i<Object.keys(users).length; i++){
+    let cv = Object.fromEntries([Object.entries(users)[i]])
+    console.log(cv)
+    //use.push(cv)
+    //console.log(use)
+}
+console.log(Object.values(users.Alex)[3])
+
+for (let a=0; a<log.length; a++){
+    let y = Object.values(log)[a]
+    console.log(y)  
+}
+
+
