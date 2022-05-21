@@ -356,3 +356,169 @@ const productsE = [
     {product: 'tea', price:' '}
 ]
 
+/* forEach se usa para iterar en cada unon de los elementos del array
+    map se usa para iterar dentro de los elemntos del array pero returna un nuevo array 
+    filter extra elos elementos que satisfacen las caracteristicas y los muestra en un nuevo array
+    reduce */
+
+countriesE.forEach((element => console.log(element)))
+
+console.log('--------------------------')
+
+namesE.forEach((element => console.log(element)))
+
+console.log('--------------------------')
+
+numbersE.forEach((element => console.log(element)))
+
+console.log('--------------------------')
+
+const CE = countries.map((cou) => cou.toUpperCase())
+console.log(CE)
+
+console.log('--------------------------')
+
+const CL = countries.map((coul) => coul.length)
+console.log(CL)
+
+console.log('--------------------------')
+
+const CL2 = CL.map((cl2) => cl2*cl2)
+console.log(CL2)
+
+console.log('--------------------------')
+
+const nUp = namesE.map((nu) => nu.toUpperCase())
+console.log(nUp)
+
+console.log('--------------------------')
+
+const prod = productsE.map((pr) => console.log(pr))
+
+console.log('--------------------------')
+
+const couLand = countriesE.filter((couLand) => couLand.endsWith('land'))
+console.log(couLand)
+
+console.log('--------------------------')
+
+const sixC = countriesE.filter((filt) => filt.length === 6)
+console.log(sixC)
+
+console.log('--------------------------')
+
+const sixCoM = countriesE.filter((filt) => filt.length >= 7)
+console.log(sixCoM)
+
+console.log('--------------------------')
+
+const startsE = namesE.filter((fily) => fily.startsWith('E'))
+console.log(startsE)
+
+console.log('--------------------------')
+
+const withPri = productsE.filter((wp) => typeof wp.price === 'number')
+console.log(withPri)
+
+console.log('--------------------------')
+
+function getStringList (arr){
+    const nue =[]
+    for (let i=0; i<=arr.length; i++){
+        nue.push(i.toString())
+    }
+    console.log(nue)
+    console.log(typeof nue[1])
+}
+getStringList(productsE)
+
+console.log('-------------------------')
+
+const sumaNumero = numbersE.reduce((a,b) => a+b)
+console.log(sumaNumero)
+
+console.log('------------------------')
+
+const countr = countriesE.reduce((a,b) => a+', '+b)
+console.log(countr, 'Are north European countries')
+
+console.log('------------------------')
+
+console.log('SOME revisa si algunos de los lementos del array comparten carateristicas')
+console.log('EVERY revisa si todos los elementos del array comparten las mismas carateristicas y returna un boleano')
+
+console.log('------------------------')
+
+const lenghTTT = namesE.some((som) => som.length === 7)
+console.log(lenghTTT)
+
+console.log('------------------------')
+
+const everNam = countriesE.every((eve) => eve.includes('land'))
+console.log(everNam)
+
+console.log('------------------------')
+
+console.log('FIND retorna el primer elemento que satisface la condicion')
+console.log('FINDINDEX retorna la posicion del primer elemento que satisface la condicion')
+
+console.log('------------------------')
+
+const fin = countriesE.find((fi) => fi.length === 6)
+console.log(fin)
+
+console.log('------------------------')
+
+console.log(countriesE.findIndex((fi6) => fi6.length === 6))
+
+console.log('------------------------')
+
+console.log(countriesE.findIndex((fi) => fi === 'Norway'))
+
+console.log('------------------------')
+
+console.log(countriesE.findIndex((df) => df === 'Rusia'))
+
+console.log('///////////////////////////////////////////////////////')
+
+const d2 = (productsE.filter((fi) => typeof fi.price === 'number')).map((gh) => gh.price).reduce((a,b) => a+b)
+console.log(d2)
+
+console.log('------------------------')
+
+function categorizeCountries (arr){
+    const arr2 = arr.filter((fg) => fg.includes('ia'))
+    const arr3 = arr.filter((fg) => fg.includes('land'))
+    const arr4 = arr.filter((fg) => fg.includes('den'))
+    console.log(arr3)
+    console.log(arr2)
+    console.log(arr4)
+}
+
+categorizeCountries(countriesE)
+
+console.log('------------------------')
+
+function times (){
+    const cant = countriesE.reduce((cont, letr))
+}
+
+//times()
+
+const rt = []
+for (let i=0; i<countriesE.length; i++){
+    let g = countries[i]
+    console.log(countries[i])
+    let h = g.split('')
+    console.log(h)
+
+    const letras = h.reduce((cont, letr) => {
+    cont[letr] = (cont[letr]||0)+1
+    return cont
+    }, {})
+    console.log(letras)
+    rt.push(letras)
+}
+console.log(rt)
+
+console.log('---------------------')
