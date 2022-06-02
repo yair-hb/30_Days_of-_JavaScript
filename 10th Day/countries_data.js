@@ -2045,6 +2045,3 @@ console.log(setC1,'Cantidad de lenguajes',setC1.size)
 
 console.log('------------------------------------')
 
-for (f in cantidadLang){
-    console.log(f)
-}
