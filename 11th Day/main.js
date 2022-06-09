@@ -365,6 +365,72 @@ console.log('--------------------------')
 
 const obt1 = {}
 for (const {name, skills} of users){
-    console.log(name, skills.length ),{}
-    
+    //console.log(name, skills.length)
+    if (skills.length < 2){
+        console.log("El usuario que tiene menos de dos skills es:",name, skills)
+    }   
 }
+
+
+//--------------------------------
+
+const student = ["David", ["HTML","CSS", "JS","React"],[98, 85, 90, 95]]
+
+console.log(student)
+
+let [nameE, skills, scores] = student
+let [ , ,jsScore, reactScore] = student[2]
+console.log(nameE, skills, jsScore, reactScore)
+
+//---------------------------------
+
+const Estudiantes = [
+    ['David', ['HTML','CSS','JS','React'],[98,85,90,95]],
+    ['John', ['HTML','CSS','JS','React'],[85,80,85,80]]
+]
+
+let arr3 =[]
+function convertArrayToObject (args){
+    for (let a=0; a<args.length; a++){
+        const [namess, skillss, scoress] = args[a]
+        const objEstud = {namess, skills, scoress}
+        console.log(objEstud)
+        arr3.push(objEstud)
+    }
+    return arr3
+}
+console.log(convertArrayToObject(Estudiantes))
+
+
+//----------------------------
+
+const Estudiante = {
+    name: "David",
+    age: 25,
+    skills: {
+        frontEnd: [
+            {skills: 'HTML',level:10},
+            {skills: 'CSS', level:8},
+            {skills: 'JS', level:8},
+            {skills: 'React', level:9}
+        ],
+        backEnd: [
+            {skills: 'Node', level:7},
+            {skills: 'GraphQL', level:8},
+        ],
+        dataBase: [
+            {skills: 'MongoDB', level:7.5}
+        ],
+        dataScience: [
+            {skills: ['Python', 'R', 'D3.js']}
+        ]
+    }
+}
+
+console.log(Estudiante)
+const copyEst = {...Estudiante}
+copyEst.skills.frontEnd.push({skills:"BootStrap", level:8})
+copyEst.skills.backEnd.push({skills:"Express", level:9})
+copyEst.skills.dataBase.push({skills:"SQL", level:8})
+console.log(copyEst)
+
