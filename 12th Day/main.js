@@ -216,7 +216,7 @@ console.log(match)
 // PODEMOS ESPECIFICAR LA LONGITUD DEL SUBSTRING QUE ESTAMOS BUSCANDO
 
 const txt8 = 'This regular expression example was made in December 6,  2019.'
-const pattern88 = /\\b\w{4}\b/g  //  exactly four character words
+const pattern88 = /\b\w{4}\b/g  //  exactly four character words
 const matches8 = txt8.match(pattern88)
 console.log(matches8)
 
@@ -262,4 +262,26 @@ let result14 = pattern14.test(name)
 console.log(result14) 
 
 //-----------------------------------------------EJERCICIOS DEL DIA 12 DEL CURSO DE JS -------------------------------
+console.log('((((((((((((((((((((((((((((Ejercicios del dia 12 del curso de JS))))))))))))))))))))))))))))')
 
+
+let txtE = 'He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses per month.'
+
+
+
+//---------------------------- /^[^0-9]/
+
+let patron = /^[1]|-/g
+let string = 'first-name'
+            //first_name -----True ok
+            //first-name -----False 
+            //1first_name ----False ok
+            //firstname ------True ok
+
+let is_valid_variable = patron.test(string)
+console.log(is_valid_variable)
+
+let patron2 = /-/g
+let string2 ='firstname'
+let isV = patron2.test(string2)
+//console.log(isV)
