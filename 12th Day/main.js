@@ -285,3 +285,48 @@ let patron2 = /-/g
 let string2 ='firstname'
 let isV = patron2.test(string2)
 //console.log(isV)
+
+
+//---------------------------------
+
+let paragraph = 'I love teaching. If you do not love teaching what else can you love. \
+I love Python if you do not love something which can give you all the capabilities to.\
+develop an application what else can you love.'
+console.log(paragraph)
+let patron3 = /[.]/g
+
+let res = paragraph.replace(patron3,'')
+console.log(res)
+
+let pr = res.split(' ')
+console.log(pr)
+
+let arr1 = []
+let ptr 
+for (let a=0; a<=pr.length; a++){
+    console.log(pr[a])
+    ptr = pr[a]
+    let re = new RegExp(ptr, 'g')
+    let res = paragraph.match(re)
+    console.log(res)  
+    if(!arr1.includes([res])==true){
+        arr1.push(res)
+    }
+    console.log(arr1.includes(res))
+}
+console.log(arr1)
+
+let set = [...new Set(arr1)]
+//console.log(set)
+
+
+// ------------------------
+
+let sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;.\
+There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. \
+;I found tea@ching m%o@re interesting tha@n any other %jo@bs. \
+%Do@es thi%s mo@tivate yo@u to be a tea@cher!?`
+
+let condicion3 = /[$#&@%]/g
+let resp3 = sentence.replace(condicion3, '')
+console.log(resp3)
