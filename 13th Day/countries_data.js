@@ -2016,10 +2016,11 @@ console.log('--------------------------------------')
 
 //------------------------
 
-//console.table(countriesE)
+console.table(countriesE)
 
 //------------------------
 
 console.group('Paises')
 console.log(countriesE)
-//console.groupEnd()
+console.groupEnd()
+
