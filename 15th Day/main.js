@@ -442,7 +442,7 @@ class estudiante extends person6 {
             this.skill.slice(0, this.skill.length-1).join(', ')+` y ${this.skill[this.skill.length-1]}`
         
         let formattedSkills = skill ? `Sabe de ${skill}`: ''
-        let pronoun = this.gender == 'Male' ? 'El' : 'Ella'
+        let pronoun = this.gender == 'Male' ? 'El' : ''
         
         let info = `${fullName} tiene ${this.age}, ${pronoun} y vive en ${this.city} en ${this.country}. ${formattedSkills}`
         return info
@@ -489,3 +489,157 @@ console.log('--------------------')
 s2.saySomething()
 console.log(s2.getFullName())
 console.log(s2.getPersonInfo())
+
+
+//-----------------------------------------------------------------------------------------------
+console.log('%c EJERCICIOS DEL DIA 15 DEL CURSO DE JS', 'color:green')
+
+class animal {
+    constructor(name, color, legs){
+        this.name = name
+        this.color = color
+        this.legs = legs
+    }
+}
+
+//--------------------------------
+
+class dog extends animal{
+    dataAnimal(){
+        console.log(`${this.name} es de color ${this.color} y tiene ${this.legs} patas`)
+    }
+}
+class cat extends animal {
+    dataAnimal(){
+        console.log(`${this.name}, es de color ${this.color} y tiene ${this.legs} patas`)
+    }
+}
+const perro = new dog (
+    'Hunter',
+    'Negro',
+    4
+)
+const gato = new cat (
+    'Michi',
+    'Gris',
+    6
+)
+perro.dataAnimal()
+gato.dataAnimal()
+
+//---------------------------------
+
+const data = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]
+
+class statistics {
+    constructor(){
+    }
+
+    static contador (){
+        let cantidad = data.length
+        return cantidad
+    }
+    static suma (){
+        let sum = 0
+        for (let i=0; i<data.length; i++){
+            sum += data[i]
+        }
+        return sum
+    }
+    static red (){
+        const reduc = (acumulador, rec) => acumulador +rec
+        return data.reduce(reduc)
+    }
+    static min (){
+        let minimo = Math.min(...data)
+        return minimo
+    }
+    static max (){
+        let maximo = Math.max(...data)
+        return maximo
+    }
+    static range (){
+        let rango = (Math.max(...data))-(Math.min(...data))
+        return rango
+    }
+    static mean (){
+        let prom = statistics.red()/statistics.contador()
+        return Math.ceil(prom)
+    }
+    static median (){
+        let med = 0
+        let m = [...data].sort()
+        let me = m.length/2
+        if (me%2 != 0){
+            med = (Math.ceil(me))-1
+        } else {
+            med = me-1
+        }
+        let media = m[med]
+        return media
+    }
+    static mode (){
+        let count = 0
+        let mode = -Infinity
+        let mod = {}
+        const moda = data.reduce((cont, numer) => {
+            cont[numer] = (cont[numer] || 0)+1
+            return cont
+        }, {})
+
+        for (let key in moda){
+            const valor = moda[key]
+            if (valor > count){
+                count = valor
+                mode = key
+                mod = {mode,count}
+            }
+        }
+        return mod
+    }
+    static variance (){
+        let sum = 0
+        for (let i=0; i<data.length; i++){
+            sum += (data[i] - this.median())**2
+        }
+        return sum/this.contador()
+    }
+    static standarDeviation (){
+        let dsv = Math.sqrt(this.variance())
+        return  Number (dsv.toFixed(2))
+    }
+    static frecuencyDistrib (){
+        let count = 0
+        let mode = 0
+        let ob = []
+        let todo 
+        const moda = data.reduce((cont, numer) => {
+            cont[numer] = (cont[numer] || 0)+1
+            return cont
+        }, {})
+        console.log(moda)
+
+        for (let num in moda){
+            let por = (moda[num]/this.contador())*100
+            count = por
+            mode = num
+            todo = `(${count}%,${mode})`
+            ob.push(todo)
+        }
+        return ob
+    }
+
+}
+console.log(data)
+//console.log(data.sort())
+console.log('Count: ',statistics.contador())
+console.log('Sum: ',statistics.suma())
+console.log('Min: ',statistics.min())
+console.log('Max: ',statistics.max())
+console.log('Range: ',statistics.range())
+console.log('Mean: ',statistics.mean())
+console.log('Median: ',statistics.median())
+console.log('Mode: ',statistics.mode())
+console.log('Variance: ',statistics.variance())
+console.log('Standar Deviation: ',statistics.standarDeviation())
+console.log(statistics.frecuencyDistrib())
