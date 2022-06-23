@@ -281,11 +281,10 @@ const e6 = JSON.parse(txt3, undefined, 4)
 console.log(e6)
 
 //-------------
-
-for (const user in e6){
-    console.log(user)
-    for (let valor in user.skills){
-        console.log(valor)
-    }
-    
+const li = []
+for (let iu in e6){
+    console.log(iu)
+    let lo = (Object.keys(e6[iu].skills)).length
+    console.log(lo)
+    li.push(lo)
 }
