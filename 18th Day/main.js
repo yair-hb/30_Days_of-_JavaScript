@@ -35,10 +35,10 @@ const callback = (err, result) => {
     if (err){
         return console.log(err)
     }
-    return console.log(result)
+    //return console.log(result)
 }
 
-doAlgo(callback)
+//doAlgo(callback)
 
 // en este caso el ERR es false por lo que va a returnar el bloque ELSE 
 
@@ -53,7 +53,7 @@ doSomething((err, result) => {
     if (err){
         return console.log(err)
     } 
-    return console.log(result)
+    //return console.log(result)
 })
 
 
@@ -69,12 +69,12 @@ doSomething((err, result) => {
                 })
 */
 
-
+/*
 const doPromise = new Promise((resolve, reject) =>{
     setTimeout(() => {
         const skills = ['Python','C++', 'Javascript']
         if (skills.length > 0){
-            resolve(skills), console.log('%c---------------', 'color:orange')
+            //resolve(skills), console.log('%c---------------', 'color:orange')
         }
         else {
             reject('ha ocurrido un error')
@@ -84,7 +84,7 @@ const doPromise = new Promise((resolve, reject) =>{
 
 doPromise
     .then(result => {
-    console.log(result)
+    //console.log(result)
     })
     .catch(error => console.log(error))
 
@@ -118,12 +118,12 @@ es muy similar a XMLHttpRequest pero la API proporciona mas y flexibles caracter
             ademas de eso veamos una demostracion del caso de uso de las promesas
             para acceder a los recursos de la red mediante FETCH API
 */
-
+/*
 const url = 'https://restcountries.com/v2/all' // API DE PAISES
 fetch(url)
     .then(response => response.json()) //ACCESSANDO A LA API EN FORMATO JSON
     .then(data => {
-        console.log(data) //OBTENIENDO LA DATA
+        //console.log(data) //OBTENIENDO LA DATA
     })
     .catch(error => console.log(error))
 
@@ -141,8 +141,55 @@ ASYNC y AWAIT es una forma elegante de manejar las promesas. es facil de entende
 // la palabra ASYNC despues de una funcion significa que returnara una promesa
 // para acceder al valor de la promesa se usa AWAIT 
 
-async function square(n) {
+/*
+const url2 = 'https://restcountries.com/v2/all'
+fetch(url2)
+    .then(response => response.json())
+    .then(data => {
+        //console.log(data)
+    })
+    .catch(error => console.error(error))
+
+// ASYNC y AWAIT
+
+const fetchData = async () =>{
+    try{
+        const response = await fetch(url)
+        const countries = await response.json()
+        //console.log(countries)
+    }
+    catch(err){
+        console.error(err)
+    }
+}
+
+console.log('===== async and wait')
+fetchData()
+
+
+const square = async function (n) {
     return n * n
-  }
-const value = await square(2)
-console.log(value)
+}
+async function func (){
+    const value = await square(2)
+    console.log(value)
+}
+
+func()
+
+
+*/
+console.log('%c EJERCICIOS DEL DIA 18 DEL CURSO DE JAVASCRIPT', 'color:red')
+
+//*************************************************************** */
+
+const sq = async function(n) {
+    return n*n
+}
+
+async function sd (){
+    const value = await sq(6)
+    
+}
+
+console.log(sd())
